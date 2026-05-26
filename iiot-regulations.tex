@@ -3,8 +3,10 @@
 \usepackage[english]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage[a4paper,margin=2.5cm]{geometry}
 
-\setlength{\parindent}{4em} 
+\setlength{\parindent}{0em} 
 
 
 \setlength{\parskip}{1em}
@@ -45,7 +47,31 @@ Each team consists of four students and two reserves (if needed) from the same s
 
 If and only if a national organization has in charge all the management (see the National Committees section), students must come from the same institution or region in the mandatory spirit of preserving the format of the teams that compete in the national context. While the definition of a region differs from country to country, we broadly consider a region as a city and the surrounding area, with the distance between the locations of the team members being small enough to allow the attendance of the team members in the exact location for each of the qualifying rounds and the national final.
 
-A team can include no more than one contestant who was awarded at the National Individual Olympiad in Programming in the previous year (for practical purposes, the teams' composition refers to the last available results of the National Individual Olympiad).
+A team may include at most one contestant who received an \textit{award} at the National Individual Olympiad in Programming in the previous year. For practical purposes, team eligibility shall be determined using the most recently available results of the National Individual Olympiad. The exact definition of an \textit{awarded student} shall be determined by each National Committee, since national olympiad systems may differ between countries. New regular members must submit their definition of an \textit{awarded student} to the International Committee for approval.
+Each National Committee must publish, on the official website of the national competition, a list of students who may not appear together on the same team. This list must be published before the start of the registration period for the corresponding competition year.
+The published list must contain at least $R$ students who would otherwise be eligible to compete (for example, students who are still enrolled in secondary education), where $R$ is defined by
+\[
+R = \frac{1}{5} \sum_{i=0}^{4} \left( (G_i + S_i + B_i)^2
++ 1.5 (G_i + S_i)^2
++ 2 G_i^2 \right),
+\]
+where $G_i$, $S_i$, and $B_i$ denote respectively the number of gold, silver, and bronze medals won by that country at the International Olympiad in Informatics $i$ years before the start of the school year of the corresponding IIOT competition series. An example calculation for the 2025--2026 school year is shown in the table below.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c}
+Year & Gold & Silver & Bronze & Formula \\
+\hline
+2025 & 2 & 0 & 2 & 30 \\
+2024 & 1 & 1 & 0 & 12 \\
+2023 & 0 & 0 & 3 & 9 \\
+2022 & 0 & 1 & 1 & 5.5 \\
+2021 & 0 & 1 & 2 & 10.5 \\
+\hline
+Average & & & & 13.40 \\
+\end{tabular}
+\caption{Example calculation of $R$ for the 2025--2026 school year.}
+\end{table}
 
 An eligible contestant is a student enrolled in an institution providing secondary education in the country they are representing. The student must be enrolled at least during the period between September 1st and December 31st of the year before the IIOT final. The student must also not be older than 20 on July 1st of the year of the IIOT final. Exceptionally, students who study outside of their country of nationality may represent the country of their nationality. 
 
